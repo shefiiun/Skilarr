@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SKILARR — Hire trusted Nigerian artisans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="skilarr.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="Skilarr home"><i></i>SKILARR</a>
+    <nav class="links">
+      <a href="#trades" class="hide-sm">Browse trades</a>
+      <a href="#how" class="hide-sm">How it works</a>
+      <a href="#founder" class="hide-sm">About</a>
+      <a href="#join" class="hide-sm">Join as an artisan</a>
+      <a href="#" id="openReqs">My requests<span class="reqcount" id="reqCount">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>The right hands for every job in Nigeria.</h1>
+      <p class="lead">Find a vetted electrician, tailor, mechanic or caterer near you. Agree a price upfront, and your money is held safely until the work is done.</p>
+      <form class="search" id="heroSearch" role="search">
+        <input id="qTrade" list="tradeList" placeholder="What do you need? e.g. plumber" aria-label="Trade">
+        <datalist id="tradeList"></datalist>
+        <select id="qCity" aria-label="City"></select>
+        <button class="btn" type="submit">Find artisans</button>
+      </form>
+      <div class="quick">Popular this week:
+        <span id="quick"></span>
+      </div>
+    </div>
+    <div class="wall" aria-label="Popular trades">
+      <button class="sign s1" data-t="vulcanizer">VULCANIZER<small>Tyres fixed fast</small></button>
+      <button class="sign s2" data-t="tailor">TAILOR &amp;<br>FASHION<small>Aso-ebi ready</small></button>
+      <button class="sign s3" data-t="electrician">ELECTRICIAN<small>Wiring · Fault finding</small></button>
+      <button class="sign s4" data-t="solar-installer">SOLAR &amp;<br>INVERTER<small>Say bye to NEPA wahala</small></button>
+      <button class="sign s5" data-t="plumber">PLUMBER<small>Leaks · Pumps · Tanks</small></button>
+      <button class="sign s6" data-t="caterer">CATERER<small>Jollof for 500</small></button>
+      <button class="sign s7" data-t="pop-ceiling-installer">POP CEILING<small>Clean finish</small></button>
+    </div>
+  </div>
+</div>
+
+<section id="tradeView" aria-live="polite">
+  <div class="wrap" id="tradeViewInner"></div>
+</section>
+
+<section id="trades">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>50 trades, one place</h2>
+        <p>From the vulcanizer down the road to the caterer for your wedding. Pick a trade to see artisans near you.</p>
+      </div>
+      <input class="tradesearch" id="tradeFilter" placeholder="Filter trades" aria-label="Filter trades">
+    </div>
+    <div class="filters" id="groupChips" role="group" aria-label="Trade groups"></div>
+    <div class="trades" id="tradeGrid"></div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="sec-head"><div>
+      <h2>How hiring works</h2>
+      <p>Four steps from "I need someone" to "job done". No running around, no begging for refunds.</p>
+    </div></div>
+    <div class="steps">
+      <div class="step"><h3>Describe the job</h3><p>Tell us what you need, where, and when. Add photos so the artisan sees the problem before arriving.</p></div>
+      <div class="step"><h3>Compare quotes</h3><p>Verified artisans near you send a price. Check their experience, past jobs and areas they cover.</p></div>
+      <div class="step"><h3>Pay into escrow</h3><p>Pay by card, transfer or USSD. Skilarr holds the money; the artisan sees it is secured.</p></div>
+      <div class="step"><h3>Confirm and release</h3><p>When the job is done to your satisfaction, confirm it and the artisan is paid the same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="trust">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Built for trust</h2><p>The biggest problem with hiring artisans is not finding one. It is finding one you can rely on.</p></div></div>
+    <div class="trust">
+      <div>
+        <svg class="ic" viewBox="0 0 44 44"><rect x="4" y="8" width="36" height="28" rx="5" fill="#0F4D3A"/><circle cx="16" cy="20" r="5" fill="#F2C230"/><rect x="24" y="16" width="12" height="3" rx="1.5" fill="#fff"/><rect x="24" y="22" width="9" height="3" rx="1.5" fill="#fff"/><rect x="9" y="28" width="14" height="3" rx="1.5" fill="#fff"/></svg>
+        <h3>ID and address checked</h3>
+        <p>Every artisan with a "Verified" badge has had their NIN, phone number and workshop address confirmed.</p>
+      </div>
+      <div>
+        <svg class="ic" viewBox="0 0 44 44"><path d="M22 4l16 6v11c0 10-7 16-16 19C13 37 6 31 6 21V10z" fill="#B8321F"/><path d="M15 22l5 5 9-10" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Your money is protected</h3>
+        <p>Payment is released only when you confirm the job. If there is a dispute, our team steps in.</p>
+      </div>
+      <div>
+        <svg class="ic" viewBox="0 0 44 44"><rect x="6" y="6" width="32" height="32" rx="6" fill="#2D6FB7"/><path d="M13 30V20M20 30V14M27 30V23M34 30V17" stroke="#F2C230" stroke-width="4" stroke-linecap="round"/></svg>
+        <h3>Honest reviews only</h3>
+        <p>Only clients who paid through Skilarr can leave a review, so ratings reflect real jobs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="founder" id="founder">
+  <div class="wrap">
+    <div class="f-photos">
+      <img class="f-eng" src="skila.jpeg" alt="Shefiiun Igbaroola on site as an electronics and computer engineer" width="700" height="1050" loading="lazy">
+      <img class="f-main" src="brokk.jpeg" alt="Shefiiun Igbaroola, founder of Skilarr, at his desk" width="1100" height="880" loading="lazy">
+      <img class="f-inset" src="sklaa.jpeg" alt="Portrait of Shefiiun Igbaroola" width="700" height="933" loading="lazy">
+    </div>
+    <div class="f-text">
+      <h2>Meet the founder</h2>
+      <blockquote>“Nigeria is full of brilliant hands. The tailor who can copy any style from one photo, the mechanic who fixes what the dealership couldn't. What they lack is a fair way to be found and paid. Skilarr is that way.”</blockquote>
+      <p class="f-name"><b>Shefiiun Igbaroola</b><br>Founder &amp; CEO, Skilarr</p>
+      <p>An electronics and computer engineer and software developer, Shefiiun Igbaroola started Skilarr after seeing how hard it is for families to find artisans they can trust, and how much good work goes unseen because the artisan has no shop on a main road. His goal is simple: every skilled worker in Africa should be one search away from their next customer.</p>
+      <a class="btn alt" href="#join">Join the movement</a>
+    </div>
+  </div>
+</section>
+
+<section class="join" id="join">
+  <div class="wrap">
+    <div>
+      <h2>Your skill deserves more customers.</h2>
+      <ul>
+        <li>Get job requests from clients in your area</li>
+        <li>Get paid on time, every time, straight to your bank</li>
+        <li>Build a profile with photos of your best work</li>
+        <li>Free to join. Skilarr takes a small fee only when you get paid</li>
+      </ul>
+    </div>
+    <form class="card" id="joinForm" novalidate>
+      <label>Full name<input name="name" required autocomplete="name"></label>
+      <label>Phone number<input name="phone" required inputmode="tel" placeholder="080..." autocomplete="tel"></label>
+      <label>Your trade<select name="trade" id="joinTrade" required></select></label>
+      <label>City<select name="city" id="joinCity" required></select></label>
+      <label>Years of experience<input name="years" type="number" min="0" max="60" required></label>
+      <label>Starting price (₦)<input name="price" type="number" min="0" step="500" required></label>
+      <label class="full">Area or neighbourhood you cover<input name="area" placeholder="e.g. Ikeja, Ogba, Agege"></label>
+      <p class="err" id="joinErr">Fill in your name, phone, trade, city, years and starting price to create your profile.</p>
+      <button class="btn" type="submit">Create my artisan profile</button>
+      <p class="ok" id="joinOk"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="logo"><i></i>SKILARR</span><p style="max-width:28em">Connecting Nigeria's skilled hands with the people who need them. Lagos · Abuja · Port Harcourt and growing.</p></div>
+    <div><b style="color:#fff">For clients</b><br><a href="#trades">Browse trades</a><br><a href="#how">How it works</a></div>
+    <div><b style="color:#fff">For artisans</b><br><a href="#join">Join Skilarr</a><br><span>Support: hello@skilarr.ng</span></div>
+    <div style="flex-basis:100%;font-size:13px;opacity:.75">Preview build. Artisan profiles marked "Sample" are placeholders to show the layout, not real people. Requests and sign-ups are saved on this device only.</div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" role="dialog" aria-modal="true">
+  <div class="dialog" id="dialog"></div>
+</div>
+
+<script src="skilarr.js"></script>
+</body>
+</html>
